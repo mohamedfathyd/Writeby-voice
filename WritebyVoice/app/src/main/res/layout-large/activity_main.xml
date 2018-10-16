@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/bac"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/bar"
+        android:id="@+id/imageView3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+
+        android:layout_below="@+id/imageView"></RelativeLayout>
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textStyle="normal"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:background="@color/f"
+        android:id="@+id/txvResult"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/btnSpeak1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/adView" />
+    <ImageView  android:layout_height="150dp"
+        android:layout_width="105dp"
+        android:id="@+id/btnSpeak1"
+        android:src="@drawable/record"
+        android:onClick="getSpeechInput"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button   android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:textSize="20dp"
+        android:id="@+id/delete"
+
+        android:text="delete all"
+        android:gravity="center"
+        android:enabled="false"
+        android:onClick="deletealll"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:textSize="15dp"
+        android:text="save in note  "
+
+        android:id="@+id/button"
+        android:enabled="false"
+        android:onClick="addd"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:textSize="15dp"
+        android:text="copy text"
+
+        android:id="@+id/button1"
+        android:enabled="false"
+        android:onClick="copyy"
+        android:layout_alignTop="@+id/button"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button" />
+    <Button
+        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:textSize="15dp"
+        android:text="Delete this line"
+        android:id="@+id/button2"
+        android:enabled="false"
+        android:onClick="delete"
+        android:layout_alignTop="@+id/delete"
+        android:layout_toLeftOf="@+id/delete"
+        android:layout_toStartOf="@+id/delete" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+
+        android:layout_below="@+id/imageView3"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button">
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>
